@@ -63,3 +63,28 @@ All project screenshots are available in the `screenshots` folder.
 ## Author
 
 **Himanshi Bhadauriya**
+## Architecture Flow
+
+```mermaid
+flowchart TD
+
+A[Superstore Dataset CSV]
+
+A --> B[Azure Storage Account]
+
+B --> C[Source Blob Container]
+
+C --> D[Azure Data Factory Pipeline]
+
+D --> E[Get Metadata Activity]
+
+E --> F[Metadata Validation]
+
+F --> G[Copy Data Activity]
+
+G --> H[Destination Blob Container]
+
+H --> I[Monitor Pipeline Run]
+
+I --> J[Successful Execution]
+```
